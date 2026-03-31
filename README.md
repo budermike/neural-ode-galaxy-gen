@@ -89,7 +89,7 @@ Scaling the CNF to real image data and systematically comparing it against the V
 
 Training a Continuous Normalizing Flow directly in pixel space, conditioned on semantic text embeddings.
 
--Generate per-image natural language captions from raw galaxy images using Qwen3-VL 7B, producing a rich text description.
+- Generate per-image natural language captions from raw galaxy images using Qwen3-VL 7B, producing a rich text description.
 - Encode captions into dense 768-dimensional embedding vectors via Snowflake Arctic Embed 33M, an embedding model that ensures semantically similarity.
 - Train a CNF to learn the mapping from a Gaussian prior directly to 64×64 pixel space, conditioned on the text embedding.
 - Generate galaxy images by integrating the learned ODE from noise to data, guided by the text conditioning signal.
