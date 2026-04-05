@@ -32,8 +32,9 @@ The central question of this project: **how much of the VAE's blurriness is arch
 
 ```
 .
-├── 01_foundations/          # Stage 1: Neural ODE from scratch on toy datasets
+├── 01_foundations/          # Stage 1: Introduction to Pytorch and Neural ODE from scratch on toy datasets
 │   ├── circle_spiral_flow.ipynb
+│   ├── pytorch_introduction.ipynb
 │   └── README.md
 │
 ├── 02_galaxy_cnf/           # Stage 2: CNF on Galaxy10 DECaLS + VAE comparison
