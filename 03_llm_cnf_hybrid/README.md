@@ -47,7 +47,7 @@ without retraining.
 
 ## References
 
-- Chen et al. (2018) — *Neural Ordinary Differential Equations*
+- Chen et al. (2019) — *Neural Ordinary Differential Equations*
   [`arXiv:1806.07366`](https://arxiv.org/abs/1806.07366)
 - Lipman et al. (2024) — *Flow Matching Guide and Code*
   [`arXiv:2412.06264`](https://arxiv.org/abs/2412.06264)
