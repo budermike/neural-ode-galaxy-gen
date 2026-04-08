@@ -24,7 +24,7 @@ The KL regularization that keeps this latent space well-behaved also smears reco
 A CNF instead learns a continuous vector field whose flow transforms a simple base distribution (e.g. a Gaussian) into the data distribution.
 The transformation is exact and invertible, avoiding the need for a low-dimensional latent space bottleneck.
 
-*The central question of this project:* can a CNF trained directly in pixel space generate sharper, more morphologically faithful galaxy images than the VAE baseline and is effective text-conditioned generation possible using automatically generated captions as conditioning signals?
+**The central question of this project:** can a CNF trained directly in pixel space generate sharper, more morphologically faithful galaxy images than the VAE baseline and is effective text-conditioned generation possible using automatically generated captions as conditioning signals?
 
 ---
 
