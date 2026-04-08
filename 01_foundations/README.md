@@ -28,7 +28,7 @@ an understanding of PyTorch and then learn it while implementing the Neural ODE.
 
 ## Part B — Neural ODEs from Scratch
 
-Starting from the core idea of the Neural ODE paper (Chen et al., 2018):
+Starting from the core idea of the Neural ODE paper (Chen et al., 2019):
 instead of stacking discrete layers, parameterize the *derivative* of the hidden
 state with a neural network and integrate it forward in time.
 
@@ -51,5 +51,5 @@ state with a neural network and integrate it forward in time.
 
 ## References
 
-- Chen et al. (2018) — *Neural Ordinary Differential Equations*
+- Chen et al. (2019) — *Neural Ordinary Differential Equations*
   [`arXiv:1806.07366`](https://arxiv.org/abs/1806.07366)
