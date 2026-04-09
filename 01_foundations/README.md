@@ -17,8 +17,10 @@ throughout the entire project.
 **Topics covered:**
 
 - Tensors, autograd and the computational graph
-- Writing custom `nn.Module` classes
+- Writing custom Model class
 - Training loops, optimizers and loss functions
+- Dataset, DataLoader, split
+- Evaluation
 - Simple regression example
 
 The goal here is not a general PyTorch tutorial — it is specifically to get
@@ -47,7 +49,8 @@ state with a neural network and integrate it forward in time.
 
 ## Status
 
-**In progress** — PyTorch intro running, circle experiment running, spiral and adjoint implementation next.
+**Done:** Pytorch introduction
+**In progress:** Circle experiment running, spiral sxperiment next.
 
 ## References
 
