@@ -32,7 +32,8 @@ The transformation is exact and invertible, avoiding the need for a low-dimensio
 
 ```
 .
-├── 01_foundations/          # Stage 1: Introduction to Pytorch and Neural ODE from scratch on toy datasets
+├── 01_foundations/          # Stage 1: Introduction to Pytorch and Neural ODE from scratch
+│   ├── neural-ode-mnist-gen.ipynb
 │   ├── circle_spiral_flow.ipynb
 │   ├── pytorch_introduction.ipynb
 │   └── README.md
