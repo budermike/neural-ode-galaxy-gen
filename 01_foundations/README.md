@@ -4,8 +4,9 @@ Building intuition for continuous normalizing flows from first principles,
 implemented entirely from scratch in PyTorch — no high-level ODE libraries,
 no galaxy data yet.
 
-This stage is split into two parts: first getting comfortable with PyTorch
-itself, then using that foundation to implement Neural ODEs from scratch.
+This stage is split into three parts: first getting comfortable with PyTorch
+itself, then using that foundation to implement Neural ODEs from scratch, and
+finally scaling to CNF-based image generation on a simple benchmark dataset.
 
 ---
 
@@ -47,10 +48,22 @@ state with a neural network and integrate it forward in time.
 
 ---
 
+## Part C — MNIST Digit Generation
+
+Scaling the Neural ODE implementation to image data as a bridge toward the
+galaxy pipeline.
+
+**Topics covered:**
+
+- Training a CNF on MNIST to generate handwritten digits in pixel space
+
+---
+
 ## Status
 
-**Done:** Pytorch introduction
-**In progress:** Circle experiment running, spiral sxperiment next.
+**Done:** PyTorch introduction
+**In progress:** Circle experiment running, spiral experiment next.
+**Upcoming:** MNIST digit generation.
 
 ## References
 
