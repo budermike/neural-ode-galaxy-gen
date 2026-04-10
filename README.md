@@ -58,12 +58,14 @@ The transformation is exact and invertible, avoiding the need for a low-dimensio
 
 <!-- TODO: Fill in once Stage 1 is complete -->
 
-Building intuition for continuous flows from first principles, without any galaxy data.
+Building intuition for continuous flows from first principles, without any galaxy data. This stage serves as a structured learning path from PyTorch fundamentals to CNF-based image generation on a simple benchmark dataset.
 
+- Learning PyTorch fundamentals and implementing ODE solvers from scratch
 - Implementing neural ODE and adjoint-based backpropagation from scratch
-- Learning the flow from a standard Gaussian to a **circle** distribution
-- Extending to a **spiral** distribution to probe expressiveness
+- Learning the flow from a standard Gaussian to a circle distribution
+- Extending to a spiral distribution to probe expressiveness
 - Visualizing the learned vector field and integration trajectories over training
+- Scaling to MNIST digit generation as a bridge toward the galaxy pipeline
 
 **Status:** In progress
 
