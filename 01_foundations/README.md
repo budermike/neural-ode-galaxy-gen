@@ -37,13 +37,13 @@ state with a neural network and integrate it forward in time.
 
 **Topics implemented from scratch:**
 
-- Euler solver
+- Euler solver, RK4 solver
 - The adjoint sensitivity method for memory-efficient backpropagation through
   an ODE solver (the three coupled ODEs for state, adjoint, and ∂L/∂θ)
-- An MLP vector field `f(z, t, θ)` as the continuous dynamics
-- Training a CNF to map a standard Gaussian to **circle** distribution
+- An MLP vector field f(z, t, θ) as the continuous dynamics
+- Training a CNF with self written methods to map a standard Gaussian to **circle** distribution
 - Extending to a **spiral** distribution to probe expressiveness limits
-- Visualizing the learned vector field and integration trajectories throughout
+- Optional: Visualizing the learned vector field and integration trajectories throughout
   training
 
 ---
@@ -61,8 +61,8 @@ galaxy pipeline.
 
 ## Status
 
-**Done:** PyTorch introduction
-**In progress:** Circle experiment running, spiral experiment next.
+**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler)
+**In progress:** Circle experiment running (Working on adjoint sensitivity method), spiral experiment next.
 **Upcoming:** MNIST digit generation.
 
 ## References
