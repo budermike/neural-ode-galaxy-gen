@@ -48,6 +48,7 @@ The transformation is exact and invertible, avoiding the need for a low-dimensio
 │   └── README.md
 │
 ├── results/                 # Generated samples, loss curves, comparisons
+├── LICENSE                  # MIT License
 └── requirements.txt
 ```
 
