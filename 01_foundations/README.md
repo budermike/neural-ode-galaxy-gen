@@ -61,8 +61,8 @@ galaxy pipeline.
 
 ## Status
 
-**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler)
-**In progress:** Circle experiment running (Working on adjoint sensitivity method), spiral experiment next.
+**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class
+**In progress:** Circle experiment running (Working on training loop), spiral experiment next.
 **Upcoming:** MNIST digit generation.
 
 ## References
