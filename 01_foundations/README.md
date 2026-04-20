@@ -86,7 +86,6 @@ estimation and gradient clipping, partially resolved but not fully stable.
 - **Double Tanh bug**: output layer had Tanh applied twice, artificially
   bounding the vector field to [-1.5, 1.5] and preventing the model from
   transporting mass far enough from the origin
-- First Big Project with PyTorch. Had the Problem to get Batch-dim correct through whole network
 - **First larger PyTorch project**: encountered typical beginner issues with
   batch dimensions propagating correctly through the augmented state vector
   [z, delta_log_p],  particularly when concatenating and slicing the state
