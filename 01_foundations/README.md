@@ -61,8 +61,8 @@ galaxy pipeline.
 
 ## Status
 
-**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, FFJORD-Regularisation
-**In progress:** Circle experiment running (Working on Trace Cheating), spiral experiment next.
+**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, FFJORD-Regularisation <br>
+**In progress:** Circle experiment running (Working on Trace Cheating), spiral experiment next. <br>
 **Upcoming:** MNIST digit generation.
 
 ---
@@ -72,15 +72,13 @@ galaxy pipeline.
 ### Trace Cheating (main open problem)
 
 The biggest current issue is trace cheating: the model exploits the
-stochastic Hutchinson estimator to drive delta_log_p artificially large,
+trace of the Jacobian to drive delta_log_p artificially large,
 causing the NLL loss to diverge toward -∞ instead of learning the target
 distribution. Addressed with FFJORD regularization, Hutchinson trace
-estimation and gradient clipping — partially resolved but not fully stable.
+estimation and gradient clipping, partially resolved but not fully stable.
 
 ### Implementation findings
 
-- **Adjoint correctness verified**: gradient error scales as O(h) with
-  Euler steps, confirming correct adjoint implementation
 - **Incorrect MLE formulation**: early runs omitted the delta_log_p term
   in the change-of-variables formula, causing the model to learn nothing
 - **Activation functions**: ReLU replaced with Tanh for better
