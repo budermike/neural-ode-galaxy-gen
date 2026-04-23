@@ -77,6 +77,12 @@ distribution. Addressed with FFJORD regularization, Hutchinson trace
 estimation and gradient clipping, partially resolved but not fully stable.~~
 > *Root cause: wrong sign, not trace cheating*
 
+### Circle Distribution: Training Difficulty
+
+The circle distribution proved challenging to learn due to a mismatch between the Gaussian prior and the target geometry. The prior concentrates most of its probability mass near the origin, whereas the target distribution places mass along a ring, precisely where the prior is sparsest. This forces the vector field to transport a large amount of probability mass over long distances, making training slow.
+
+After a sufficient number of epochs the model produced output loosely resembling two arcs, at which point the experiment was stopped. A less concentrated prior (e.g. uniform) would be a better choice for ring-shaped targets in future runs.
+
 ### Implementation findings
 
 - **Incorrect MLE formulation**: early runs omitted the delta_log_p term in the change-of-variables formula, causing the model to receive no learning signal. Subsequently, a sign error in the vector field MLE caused the model to push probability mass outward rather than concentrating it.
@@ -91,6 +97,12 @@ estimation and gradient clipping, partially resolved but not fully stable.~~
   across the ODE solver, adjoint backward pass, and loss calculation
 
 ---
+
+## Results & Visualizations
+
+Plots (circle/spiral outputs, training history)
+are documented inline in the notebook:
+📓 [`circle-spiral-flow.ipynb`](./circle-spiral-flow.ipynb)
 
 ## References
 
