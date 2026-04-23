@@ -102,7 +102,7 @@ After a sufficient number of epochs the model produced output loosely resembling
 
 Plots (circle/spiral outputs, training history)
 are documented inline in the notebook:
-📓 [`circle-spiral-flow.ipynb`](./circle-spiral-flow.ipynb)
+[`circle_spiral_flow.ipynb`](./circle_spiral_flow.ipynb)
 
 ## References
 
