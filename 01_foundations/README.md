@@ -42,9 +42,7 @@ state with a neural network and integrate it forward in time.
   an ODE solver (the three coupled ODEs for state, adjoint, and ∂L/∂θ)
 - An MLP vector field f(z, t, θ) as the continuous dynamics
 - Training a CNF with self written methods to map a standard Gaussian to **circle** distribution
-- Extending to a **spiral** distribution to probe expressiveness limits
-- Optional: Visualizing the learned vector field and integration trajectories throughout
-  training
+- Extending to a **spiral** distribution
 
 ---
 
@@ -56,7 +54,7 @@ galaxy pipeline.
 **Topics covered:**
 
 - Training a CNF on MNIST to generate handwritten digits in pixel space
-
+- Visualize the trained distribution with UMAP and compare it with original MNIST data distribution.
 ---
 
 ## Status
