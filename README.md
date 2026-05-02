@@ -116,7 +116,7 @@ Training a Continuous Normalizing Flow directly in pixel space, conditioned on s
 - Chen et al. (2019) — [Neural Ordinary Differential Equations](https://arxiv.org/abs/1806.07366)
 - Lipman et al. (2023) - [Flow Matching for Generative Modeling](https://arxiv.org/abs/2210.02747)
 - Lipman et al. (2024) — [Flow Matching Guide and Code](https://arxiv.org/abs/2412.06264)
-
+- Grathwohl et al. (2018) — [FFJORD: Free-form Continuous Dynamics for Scalable Reversible Generative Models](https://arxiv.org/abs/1810.01367)
 ---
 
 ## About
