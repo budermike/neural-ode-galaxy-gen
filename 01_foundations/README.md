@@ -108,3 +108,5 @@ are documented inline in the notebook:
 
 - Chen et al. (2019) — *Neural Ordinary Differential Equations*
   [`arXiv:1806.07366`](https://arxiv.org/abs/1806.07366)
+- Grathwohl et al. (2018) — *FFJORD: Free-form Continuous Dynamics for Scalable Reversible Generative Models*
+  [`arXiv:1810.01367`](https://arxiv.org/abs/1810.01367)
