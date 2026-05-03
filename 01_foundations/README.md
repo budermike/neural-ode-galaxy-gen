@@ -55,6 +55,7 @@ galaxy pipeline.
 
 - Training a CNF on MNIST to generate handwritten digits in pixel space
 - Visualize the trained distribution with UMAP and compare it with original MNIST data distribution.
+
 ---
 
 ## Status
@@ -68,6 +69,7 @@ galaxy pipeline.
 ## Known Issues & Findings
 
 ### ~~Trace Cheating~~
+
 ~~The biggest current issue is trace cheating: the model exploits the
 Jacobian trace to drive delta_log_p artificially large,
 causing the NLL loss to diverge toward -∞ instead of learning the target
