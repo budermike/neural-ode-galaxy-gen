@@ -60,9 +60,9 @@ galaxy pipeline.
 
 ## Status
 
-**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, FFJORD-Regularisation, Circle experiment, Spiral experiment
+**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, FFJORD-Regularisation, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data
 
-**In progress:** MNIST digit generation.
+**In progress:** CNF with ResNet, MNIST digit generation.
 
 ---
 
