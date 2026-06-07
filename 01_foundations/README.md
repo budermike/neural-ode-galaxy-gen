@@ -60,28 +60,32 @@ galaxy pipeline.
 
 ## Status
 
-**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data
+**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJord implementation
 
-**In progress:** CNF with ResNet, MNIST digit generation, correct FFJord implementation
+**In progress:** CNF with CNN, MNIST digit generation, correct 
 
 ---
 
 ## Known Issues & Findings
-
-### ~~Trace Cheating~~
-
-~~The biggest current issue is trace cheating: the model exploits the
-Jacobian trace to drive delta_log_p artificially large,
-causing the NLL loss to diverge toward -∞ instead of learning the target
-distribution. Addressed with FFJORD regularization, Hutchinson trace
-estimation and gradient clipping, partially resolved but not fully stable.~~
-> *Root cause: wrong sign, not trace cheating*
 
 ### Circle Distribution: Training Difficulty
 
 The circle distribution proved challenging to learn due to a mismatch between the Gaussian prior and the target geometry. The prior concentrates most of its probability mass near the origin, whereas the target distribution places mass along a ring, precisely where the prior is sparsest. This forces the vector field to transport a large amount of probability mass over long distances, making training slow.
 
 After a sufficient number of epochs the model produced output loosely resembling two arcs, at which point the experiment was stopped. A less concentrated prior (e.g. uniform) would be a better choice for ring-shaped targets in future runs.
+
+
+### Trace Cheating
+
+TThe biggest current issue is trace cheating: the model exploits the Jacobian trace to drive delta_log_p artificially negative, inflating the log-likelihood without learning a meaningful density.
+An attempt to add a regularization penalty on delta_log_p (bounded from below) had limited effect — it slightly reduced trace cheating in the 2D run, but failed to contain it in the MNIST run.
+Possible root causes:
+
+1. FiLM scaling (γ): The learned scale parameter γ directly multiplies the diagonal of the Jacobian, scaling the trace at every conditioned layer.
+2. UNet architecture: Skip connections add independent Jacobian contributions (additive), while the main encoder–decoder path compounds γ-scaling multiplicatively through the chain rule — amplifying the effect across depth.
+3. Hutchinson trace estimator variance: The stochastic trace estimate introduces noise that the optimizer can exploit, pushing estimates further negative.
+
+Next step: Strip back to a simpler architecture close to the original FFJORD paper — a single CNF without skip connections, with time t concatenated as an additional input channel.
 
 ### Implementation findings
 
