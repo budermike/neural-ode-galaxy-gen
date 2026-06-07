@@ -60,9 +60,9 @@ galaxy pipeline.
 
 ## Status
 
-**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJord implementation
+**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJORD implementation, Regularization Techniques (Paper RNODE)
 
-**In progress:** CNF with CNN, Regularization Techniques (Paper How to Train Neural ODE), MNIST digit generation 
+**In progress:** CNF with CNN, , MNIST digit generation 
 
 ---
 
@@ -85,7 +85,8 @@ Possible root causes:
 2. UNet architecture: Skip connections add independent Jacobian contributions (additive), while the main encoder–decoder path compounds γ-scaling multiplicatively through the chain rule — amplifying the effect across depth.
 3. Hutchinson trace estimator variance: The stochastic trace estimate introduces noise that the optimizer can exploit, pushing estimates further negative.
 
-Next step: Strip back to a simpler architecture close to the original FFJORD paper — a single CNF without skip connections, with time t concatenated as an additional input channel.
+Stripped back to a simpler architecture close to the original FFJORD paper — a single CNF without skip connections, with time t concatenated as an additional input channel. (Helped for the first few Epochs, but still trace cheating after epoch 8)
+Next Step: RNODE Regularization Implementation to get a well behaved trace through frobenius norm regularization on jacobian
 
 ### Implementation findings
 
