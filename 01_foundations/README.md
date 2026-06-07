@@ -62,7 +62,7 @@ galaxy pipeline.
 
 **Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJord implementation
 
-**In progress:** CNF with CNN, MNIST digit generation, correct 
+**In progress:** CNF with CNN, Regularization Techniques (Paper How to Train Neural ODE), MNIST digit generation 
 
 ---
 
@@ -114,3 +114,5 @@ are documented inline in the notebook:
   [`arXiv:1806.07366`](https://arxiv.org/abs/1806.07366)
 - Grathwohl et al. (2018) — *FFJORD: Free-form Continuous Dynamics for Scalable Reversible Generative Models*
   [`arXiv:1810.01367`](https://arxiv.org/abs/1810.01367)
+- Finlay et al. (2020) — *How to Train Your Neural ODE: the World of Jacobian and Kinetic Regularization*
+  [`arXiv:2002.02798`]([https://arxiv.org/abs/2002.02798])
