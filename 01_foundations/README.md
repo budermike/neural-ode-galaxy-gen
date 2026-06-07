@@ -115,4 +115,4 @@ are documented inline in the notebook:
 - Grathwohl et al. (2018) — *FFJORD: Free-form Continuous Dynamics for Scalable Reversible Generative Models*
   [`arXiv:1810.01367`](https://arxiv.org/abs/1810.01367)
 - Finlay et al. (2020) — *How to Train Your Neural ODE: the World of Jacobian and Kinetic Regularization*
-  [`arXiv:2002.02798`]([https://arxiv.org/abs/2002.02798])
+  [`arXiv:2002.02798`](https://arxiv.org/abs/2002.02798)
