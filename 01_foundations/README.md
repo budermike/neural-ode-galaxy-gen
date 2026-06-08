@@ -86,7 +86,7 @@ Possible root causes:
 3. Hutchinson trace estimator variance: The stochastic trace estimate introduces noise that the optimizer can exploit, pushing estimates further negative.
 
 Stripped back to a simpler architecture close to the original FFJORD paper — a single CNF without skip connections, with time t concatenated as an additional input channel. (Helped for the first few Epochs, but still trace cheating after epoch 8)
-Next Step: RNODE Regularization Implementation to get a well behaved trace through frobenius norm regularization on jacobian
+Next Step: RNODE Regularization Implementation to get a well behaved trace through frobenius norm regularization on jacobian (also add dequantization and use logit for R->R diffeomorphismus instead of [0, 1]->R which makes singualrities near 0 and 1, should reduce trace cheating)
 
 ### Implementation findings
 
