@@ -62,7 +62,7 @@ galaxy pipeline.
 
 **Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJORD implementation, Regularization Techniques (Paper RNODE)
 
-**In progress:** CNF with CNN, , MNIST digit generation 
+**In progress:** CNF with CNN, , MNIST digit generation
 
 ---
 
@@ -73,7 +73,6 @@ galaxy pipeline.
 The circle distribution proved challenging to learn due to a mismatch between the Gaussian prior and the target geometry. The prior concentrates most of its probability mass near the origin, whereas the target distribution places mass along a ring, precisely where the prior is sparsest. This forces the vector field to transport a large amount of probability mass over long distances, making training slow.
 
 After a sufficient number of epochs the model produced output loosely resembling two arcs, at which point the experiment was stopped. A less concentrated prior (e.g. uniform) would be a better choice for ring-shaped targets in future runs.
-
 
 ### Trace Cheating
 
@@ -86,7 +85,7 @@ Possible root causes:
 3. Hutchinson trace estimator variance: The stochastic trace estimate introduces noise that the optimizer can exploit, pushing estimates further negative.
 
 Stripped back to a simpler architecture close to the original FFJORD paper — a single CNF without skip connections, with time t concatenated as an additional input channel. (Helped for the first few Epochs, but still trace cheating after epoch 8)
-Next Step: RNODE Regularization Implementation to get a well behaved trace through frobenius norm regularization on jacobian (also add dequantization and use logit for R->R diffeomorphismus instead of [0, 1]->R which makes singualrities near 0 and 1, should reduce trace cheating)
+Also added RNODE regularization to get a well behaved trace through frobenius norm regularization on jacobian (also add dequantization and use logit for R->R diffeomorphismus instead of [0, 1]->R which makes singualrities near 0 and 1, which reduced trace cheating. Without dequantization there was still trace cheating, but less dominant.)
 
 ### Implementation findings
 
