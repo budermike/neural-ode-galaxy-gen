@@ -116,3 +116,5 @@ are documented inline in the notebook:
   [`arXiv:1810.01367`](https://arxiv.org/abs/1810.01367)
 - Finlay et al. (2020) — *How to Train Your Neural ODE: the World of Jacobian and Kinetic Regularization*
   [`arXiv:2002.02798`](https://arxiv.org/abs/2002.02798)
+- Lipman et al. (2023) - *Flow Matching for Generative Modeling*
+  [`arXiv:2210.02747`](https://arxiv.org/abs/2210.02747)

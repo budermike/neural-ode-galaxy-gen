@@ -65,11 +65,10 @@ Building intuition for continuous flows from first principles, without any galax
 - Learning PyTorch fundamentals and implementing ODE solvers from scratch
 - Implementing neural ODE and adjoint-based backpropagation from scratch
 - Learning the flow from a standard Gaussian to a circle distribution
-- Extending to a spiral distribution to probe expressiveness
-- Visualizing the learned vector field and integration trajectories over training
+- Extending to a spiral distribution
 - Scaling to MNIST digit generation as a bridge toward the galaxy pipeline
 
-**Status:** In progress
+**Status:** In progress (MNIST almost done)
 
 ---
 
@@ -88,7 +87,7 @@ Scaling the CNF to real image data and systematically comparing it against the V
 
 ---
 
-### (Optional) Stage 3 — Text-Conditioned Image Generation via CNF
+### (Optional) Stage 3 — Text-Conditioned Image Generation via CNF (Postponed and will be done when more time)
 
 <!-- TODO: Fill in once Stage 3 is complete -->
 
@@ -117,6 +116,8 @@ Training a Continuous Normalizing Flow directly in pixel space, conditioned on s
 - Lipman et al. (2023) - [Flow Matching for Generative Modeling](https://arxiv.org/abs/2210.02747)
 - Lipman et al. (2024) — [Flow Matching Guide and Code](https://arxiv.org/abs/2412.06264)
 - Grathwohl et al. (2018) — [FFJORD: Free-form Continuous Dynamics for Scalable Reversible Generative Models](https://arxiv.org/abs/1810.01367)
+- Finlay et al. (2020) — [How to Train Your Neural ODE: the World of Jacobian and Kinetic Regularization](https://arxiv.org/abs/2002.02798)
+
 ---
 
 ## About
