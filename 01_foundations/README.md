@@ -60,9 +60,9 @@ galaxy pipeline.
 
 ## Status
 
-**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJORD implementation, Regularization Techniques (Paper RNODE)
+**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJORD implementation, Regularization Techniques (Paper RNODE), Flow Matching
 
-**In progress:** CNF with CNN, , MNIST digit generation
+**In progress:** MNIST digit generation training
 
 ---
 
@@ -75,17 +75,20 @@ The circle distribution proved challenging to learn due to a mismatch between th
 After a sufficient number of epochs the model produced output loosely resembling two arcs, at which point the experiment was stopped. A less concentrated prior (e.g. uniform) would be a better choice for ring-shaped targets in future runs.
 
 ### Trace Cheating
+The dominant failure mode in CNF training via MLE is trace cheating: the model exploits volume contraction to drive delta_log_p artificially negative, inflating the log-likelihood without learning a meaningful density.
+Three structural root causes were identified:
 
-TThe biggest current issue is trace cheating: the model exploits the Jacobian trace to drive delta_log_p artificially negative, inflating the log-likelihood without learning a meaningful density.
-An attempt to add a regularization penalty on delta_log_p (bounded from below) had limited effect — it slightly reduced trace cheating in the 2D run, but failed to contain it in the MNIST run.
-Possible root causes:
+1. FiLM scaling (γ): The learned scale parameter γ directly multiplies the Jacobian diagonal at every conditioned layer, giving the optimizer a direct handle on the trace.
+2. Skip connections: In a UNet, skip connections add independent Jacobian contributions additively, while the main encoder–decoder path compounds γ-scaling multiplicatively through the chain rule — amplifying the effect across depth.
+3. Hutchinson estimator variance: The stochastic trace estimate introduces noise the optimizer can exploit, biasing estimates further negative.
 
-1. FiLM scaling (γ): The learned scale parameter γ directly multiplies the diagonal of the Jacobian, scaling the trace at every conditioned layer.
-2. UNet architecture: Skip connections add independent Jacobian contributions (additive), while the main encoder–decoder path compounds γ-scaling multiplicatively through the chain rule — amplifying the effect across depth.
-3. Hutchinson trace estimator variance: The stochastic trace estimate introduces noise that the optimizer can exploit, pushing estimates further negative.
+Interventions and outcomes
+A direct penalty on delta_log_p had limited effect — marginally helpful in the 2D setting, ineffective on MNIST.
+Switching to a simpler architecture closer to the original FFJORD paper (single CNF, no skip connections, time t concatenated as an input channel) delayed the onset but did not eliminate trace cheating beyond epoch 8.
+Adding RNODE regularization (Frobenius norm penalty on the Jacobian), dequantization, and a logit preprocessing step (mapping (0,1) → ℝ via logit, avoiding the singularities at 0 and 1 that arise when pixel values hit the boundary of the support) together resolved trace cheating: training showed bounded positive delta_log_p, stable NFE (~52–64), and declining loss. However, MLE training remained infeasible on a single GPU — slow odeint evaluations, high NFE, and the tendency of maximum likelihood to produce mode collapse in high dimensions make it impractical for MNIST-scale data without significant compute.
 
-Stripped back to a simpler architecture close to the original FFJORD paper — a single CNF without skip connections, with time t concatenated as an additional input channel. (Helped for the first few Epochs, but still trace cheating after epoch 8)
-Also added RNODE regularization to get a well behaved trace through frobenius norm regularization on jacobian (also add dequantization and use logit for R->R diffeomorphismus instead of [0, 1]->R which makes singualrities near 0 and 1, which reduced trace cheating. Without dequantization there was still trace cheating, but less dominant.)
+Conclusion
+MLE training of CNFs on high-dimensional image data is not tractable on a single GPU in reasonable time: trace cheating causes mode collapse, and the underlying incentive structure of maximum likelihood makes this a structural problem rather than a tuning problem. Flow Matching eliminates this failure mode by replacing likelihood with a direct MSE objective on the vector field, making it the natural next step.
 
 ### Implementation findings
 
