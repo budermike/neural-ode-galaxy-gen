@@ -82,13 +82,13 @@ Three structural root causes were identified:
 2. Skip connections: In a UNet, skip connections add independent Jacobian contributions additively, while the main encoder–decoder path compounds γ-scaling multiplicatively through the chain rule, amplifying the effect across depth.
 3. Hutchinson estimator variance: The stochastic trace estimate introduces noise the optimizer can exploit, biasing estimates further negative.
 
-#### Interventions and outcomes
+#### Interventions and outcomes:
 
 A direct penalty on delta_log_p had limited effect. It is marginally helpful in the 2D setting, ineffective on MNIST.<br>
 Switching to a simpler architecture closer to the original FFJORD paper (single CNF, no skip connections, time t concatenated as an input channel) delayed the onset but did not eliminate trace cheating beyond epoch 8.<br>
 Adding RNODE regularization (Frobenius norm penalty on the Jacobian), dequantization, and a logit preprocessing step (mapping (0,1) → ℝ via logit, avoiding the singularities at 0 and 1 that arise when pixel values hit the boundary of the support) together resolved trace cheating: training showed bounded positive delta_log_p, stable NFE (~52–64), and declining loss. However, MLE training remained infeasible on a single GPU, slow odeint evaluations, high NFE, and the tendency of maximum likelihood to produce mode collapse in high dimensions make it impractical for MNIST-scale data without significant compute.
 
-#### Conclusion
+#### Conclusion:
 
 MLE training of CNFs on high-dimensional image data is not tractable on a single GPU in reasonable time: trace cheating causes mode collapse, and the underlying incentive structure of maximum likelihood makes this a structural problem rather than a tuning problem. Flow Matching eliminates this failure mode by replacing likelihood with a direct MSE objective on the vector field, making it the natural next step.
 
