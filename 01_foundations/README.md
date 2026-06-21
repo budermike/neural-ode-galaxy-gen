@@ -74,7 +74,7 @@ The circle distribution proved challenging to learn due to a mismatch between th
 
 After a sufficient number of epochs the model produced output loosely resembling two arcs, at which point the experiment was stopped. A less concentrated prior (e.g. uniform) would be a better choice for ring-shaped targets in future runs.
 
-### Trace Cheating
+### MNIST: Trace Cheating
 The dominant failure mode in CNF training via MLE is trace cheating: the model exploits volume contraction to drive delta_log_p artificially negative, inflating the log-likelihood without learning a meaningful density.
 Three structural root causes were identified:
 
