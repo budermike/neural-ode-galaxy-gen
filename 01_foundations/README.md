@@ -6,7 +6,7 @@ no galaxy data yet.
 
 This stage is split into three parts: first getting comfortable with PyTorch
 itself, then using that foundation to implement Neural ODEs from scratch, and
-finally scaling to CNF-based image generation on a simple benchmark dataset.
+finally scaling to CNF-based image generation on MNIST.
 
 ---
 
@@ -60,9 +60,7 @@ galaxy pipeline.
 
 ## Status
 
-**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJORD implementation, Regularization Techniques (Paper RNODE), Flow Matching
-
-**In progress:** MNIST digit generation training
+**Done:** PyTorch introduction, ODE Solvers (RK4 and Euler), Adjount Method, Model Class, Training loop, Evaluation, Hutchinson Trace Estimate, Regularisation for Circle/Moon, Circle experiment, Spiral experiment, ResNet-Block, FilM injection of time t, UMAP of original MNIST data, FFJORD implementation, Regularization Techniques (Paper RNODE), Flow Matching, MNIST Generation
 
 ---
 
@@ -93,6 +91,12 @@ Adding RNODE regularization (Frobenius norm penalty on the Jacobian), dequantiza
 
 MLE training of CNFs on high-dimensional image data is not tractable on a single GPU in reasonable time: trace cheating causes mode collapse, and the underlying incentive structure of maximum likelihood makes this a structural problem rather than a tuning problem. Flow Matching eliminates this failure mode by replacing likelihood with a direct MSE objective on the vector field, making it the natural next step.
 
+### MNIST: Flow Matching
+
+Flow Matching replaces the MLE objective with direct regression on the vector field. A straight-line path is defined between noise and data samples at training time, the network learns to predict the corresponding velocity. This removes the ODE solve from the training loop entirely — no adjoint, no trace estimation, no NFE pressure — which eliminates trace cheating structurally rather than by regularization.
+
+Training on MNIST converged stably and generation quality improved substantially over the MLE runs. The RNODE architecture (SingleFlow CNN, time t as input channel) was reused almost without modification (added skip connections which made problems when using MLE), but mostly only the training objective changed. This confirms that the architecture itself was not the bottleneck in prior runs.
+
 ### Implementation findings
 
 - **Incorrect MLE formulation**: early runs omitted the delta_log_p term in the change-of-variables formula, causing the model to receive no learning signal. Subsequently, a sign error in the vector field MLE caused the model to push probability mass outward rather than concentrating it.
@@ -119,13 +123,7 @@ Plots (MNIST outputs, training history) are in:
 - CNF with MLE: [`neural-ode-mnist-gen.ipynb`](./neural-ode-mnist-gen.ipynb)
 - CNF with Flow Matching: [`neural-ode-mnist-flowmatching.ipynb`](./neural-ode-mnist-flowmatching.ipynb)
 
-Overall it was a nice experience to see how models learning dynamics developed. It started with Continoues Normalizing flows, which used the idea of learning an ODE via MLE with the adjoint method for efficient backpropagation (memory efficient O(1)). Problem There was Mode collapse most of the times. In the 2D Toy Datasets it was mostly possible to add a L_2 type Regularisation on the delta_log trace term, to get rid of it. After changing the dataset to the MNIST dataset, severall problems emerged. Most Dominant was Trace cheating (lead to mode collapse) and time for Computation. From here on, I expermented with severall approaches of different Papers:
-
-- FFJORD: Introduced an unbiased Estimator, which helped reducing computational time, and a simpler Architecture reduced delayed trace cheating
-- RNODE: Introduced 2 types of Regularizations, Especially the Forbenius Norm, helped to stabalize the trace term and got rid of trace cheating. But training wasn't tractable on 1 GPU on Kaggle.
-- Flowmatching: Introduced a regression style training objective. Implementing this helped reducing computation time and improved the generation quality drasticly.
-
-With those insights i am ready to go further ro try Flowmatching on the Galaxy dataset. Some time needs to be taken to read deeper into flowmatching and good flow design such that a matching objective for good quality can be derived.
+Stage 1 establishes the full CNF training pipeline — from adjoint-based MLE through FFJORD and RNODE regularization to Flow Matching — and identifies the structural limits of each approach on image data. The key result is not a generation quality score but a diagnostic: MLE-based CNF training is computationally intractable on a single GPU at MNIST scale, and Flow Matching resolves this by replacing the likelihood objective entirely. These findings directly inform the architecture choices in Stage 2.
 
 ## References
 
