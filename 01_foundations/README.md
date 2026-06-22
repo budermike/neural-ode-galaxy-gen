@@ -75,6 +75,7 @@ The circle distribution proved challenging to learn due to a mismatch between th
 After a sufficient number of epochs the model produced output loosely resembling two arcs, at which point the experiment was stopped. A less concentrated prior (e.g. uniform) would be a better choice for ring-shaped targets in future runs.
 
 ### MNIST: Trace Cheating
+
 The dominant failure mode in CNF training via MLE is trace cheating: the model exploits volume contraction to drive delta_log_p artificially negative, inflating the log-likelihood without learning a meaningful density.
 Three structural root causes were identified:
 
@@ -109,9 +110,22 @@ MLE training of CNFs on high-dimensional image data is not tractable on a single
 
 ## Results & Visualizations
 
-Plots (circle/spiral outputs, training history)
-are documented inline in the notebook:
-[`circle_spiral_flow.ipynb`](./circle_spiral_flow.ipynb)
+Plots (circle/spiral outputs, training history) are in:
+
+- [`circle_spiral_flow.ipynb`](./circle_spiral_flow.ipynb)
+
+Plots (MNIST outputs, training history) are in:
+
+- CNF with MLE: [`neural-ode-mnist-gen.ipynb`](./neural-ode-mnist-gen.ipynb)
+- CNF with Flow Matching: [`neural-ode-mnist-flowmatching.ipynb`](./neural-ode-mnist-flowmatching.ipynb)
+
+Overall it was a nice experience to see how models learning dynamics developed. It started with Continoues Normalizing flows, which used the idea of learning an ODE via MLE with the adjoint method for efficient backpropagation (memory efficient O(1)). Problem There was Mode collapse most of the times. In the 2D Toy Datasets it was mostly possible to add a L_2 type Regularisation on the delta_log trace term, to get rid of it. After changing the dataset to the MNIST dataset, severall problems emerged. Most Dominant was Trace cheating (lead to mode collapse) and time for Computation. From here on, I expermented with severall approaches of different Papers:
+
+- FFJORD: Introduced an unbiased Estimator, which helped reducing computational time, and a simpler Architecture reduced delayed trace cheating
+- RNODE: Introduced 2 types of Regularizations, Especially the Forbenius Norm, helped to stabalize the trace term and got rid of trace cheating. But training wasn't tractable on 1 GPU on Kaggle.
+- Flowmatching: Introduced a regression style training objective. Implementing this helped reducing computation time and improved the generation quality drasticly.
+
+With those insights i am ready to go further ro try Flowmatching on the Galaxy dataset. Some time needs to be taken to read deeper into flowmatching and good flow design such that a matching objective for good quality can be derived.
 
 ## References
 
