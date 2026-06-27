@@ -1,0 +1,500 @@
+batch: 10, loss: 0.7971250
+batch: 20, loss: 0.5143125
+batch: 30, loss: 0.3364908
+batch: 40, loss: 0.2646996
+batch: 50, loss: 0.2408890
+batch: 60, loss: 0.2026940
+batch: 70, loss: 0.1693116
+epoch: 1
+epoch loss: 0.4342323
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1622645
+batch: 20, loss: 0.1910603
+batch: 30, loss: 0.1907677
+batch: 40, loss: 0.1585103
+batch: 50, loss: 0.1611469
+batch: 60, loss: 0.1417335
+batch: 70, loss: 0.1698923
+epoch: 2
+epoch loss: 0.1640962
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1663268
+batch: 20, loss: 0.1593841
+batch: 30, loss: 0.1440271
+batch: 40, loss: 0.1405805
+batch: 50, loss: 0.1305240
+batch: 60, loss: 0.1361058
+batch: 70, loss: 0.1190001
+epoch: 3
+epoch loss: 0.1414245
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1025586
+batch: 20, loss: 0.1310217
+batch: 30, loss: 0.1426159
+batch: 40, loss: 0.1260006
+batch: 50, loss: 0.1299935
+batch: 60, loss: 0.1240401
+batch: 70, loss: 0.0968828
+epoch: 4
+epoch loss: 0.1272081
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1058729
+batch: 20, loss: 0.0970611
+batch: 30, loss: 0.1137227
+batch: 40, loss: 0.1278291
+batch: 50, loss: 0.1164716
+batch: 60, loss: 0.1302167
+batch: 70, loss: 0.0840092
+epoch: 5
+epoch loss: 0.1181614
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1351541
+batch: 20, loss: 0.1277959
+batch: 30, loss: 0.1123489
+batch: 40, loss: 0.1011475
+batch: 50, loss: 0.1015988
+batch: 60, loss: 0.1150086
+batch: 70, loss: 0.1335599
+epoch: 6
+epoch loss: 0.1124936
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1163862
+batch: 20, loss: 0.1285420
+batch: 30, loss: 0.1210015
+batch: 40, loss: 0.1150038
+batch: 50, loss: 0.1093330
+batch: 60, loss: 0.0837039
+batch: 70, loss: 0.1138165
+epoch: 7
+epoch loss: 0.1111477
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1222390
+batch: 20, loss: 0.0975388
+batch: 30, loss: 0.0963482
+batch: 40, loss: 0.1141280
+batch: 50, loss: 0.1004589
+batch: 60, loss: 0.1022026
+batch: 70, loss: 0.0827138
+epoch: 8
+epoch loss: 0.1057397
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1202889
+batch: 20, loss: 0.1022635
+batch: 30, loss: 0.1018294
+batch: 40, loss: 0.0949134
+batch: 50, loss: 0.1288985
+batch: 60, loss: 0.1070429
+batch: 70, loss: 0.1256524
+epoch: 9
+epoch loss: 0.1042207
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1226496
+batch: 20, loss: 0.1199844
+batch: 30, loss: 0.0978663
+batch: 40, loss: 0.1026470
+batch: 50, loss: 0.0946169
+batch: 60, loss: 0.0960653
+batch: 70, loss: 0.0910404
+epoch: 10
+epoch loss: 0.1049999
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1026265
+batch: 20, loss: 0.1030748
+batch: 30, loss: 0.1104418
+batch: 40, loss: 0.0912807
+batch: 50, loss: 0.0956917
+batch: 60, loss: 0.1067339
+batch: 70, loss: 0.1245000
+epoch: 11
+epoch loss: 0.1036242
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1158704
+batch: 20, loss: 0.0969206
+batch: 30, loss: 0.1089047
+batch: 40, loss: 0.1133012
+batch: 50, loss: 0.0955192
+batch: 60, loss: 0.0906365
+batch: 70, loss: 0.0941731
+epoch: 12
+epoch loss: 0.1012904
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1022209
+batch: 20, loss: 0.0917213
+batch: 30, loss: 0.1191078
+batch: 40, loss: 0.1209586
+batch: 50, loss: 0.0951968
+batch: 60, loss: 0.1101363
+batch: 70, loss: 0.0912982
+epoch: 13
+epoch loss: 0.1027598
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0895386
+batch: 20, loss: 0.0943044
+batch: 30, loss: 0.0985540
+batch: 40, loss: 0.0673163
+batch: 50, loss: 0.1025463
+batch: 60, loss: 0.1111598
+batch: 70, loss: 0.0888380
+epoch: 14
+epoch loss: 0.0987766
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0888060
+batch: 20, loss: 0.1091901
+batch: 30, loss: 0.1087879
+batch: 40, loss: 0.1094991
+batch: 50, loss: 0.1120410
+batch: 60, loss: 0.0825493
+batch: 70, loss: 0.0992287
+epoch: 15
+epoch loss: 0.1006551
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0924080
+batch: 20, loss: 0.1032821
+batch: 30, loss: 0.1199462
+batch: 40, loss: 0.0888839
+batch: 50, loss: 0.0915774
+batch: 60, loss: 0.0876228
+batch: 70, loss: 0.1417357
+epoch: 16
+epoch loss: 0.1007148
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0992483
+batch: 20, loss: 0.0979750
+batch: 30, loss: 0.0884437
+batch: 40, loss: 0.0934189
+batch: 50, loss: 0.1010756
+batch: 60, loss: 0.1033369
+batch: 70, loss: 0.0951525
+epoch: 17
+epoch loss: 0.0997712
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1215833
+batch: 20, loss: 0.0952846
+batch: 30, loss: 0.0914152
+batch: 40, loss: 0.1128382
+batch: 50, loss: 0.0887383
+batch: 60, loss: 0.0865992
+batch: 70, loss: 0.1147599
+epoch: 18
+epoch loss: 0.0991367
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0931560
+batch: 20, loss: 0.0979761
+batch: 30, loss: 0.1085232
+batch: 40, loss: 0.0811395
+batch: 50, loss: 0.0926559
+batch: 60, loss: 0.0957457
+batch: 70, loss: 0.0927491
+epoch: 19
+epoch loss: 0.0961859
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1069866
+batch: 20, loss: 0.0870873
+batch: 30, loss: 0.0836761
+batch: 40, loss: 0.0911193
+batch: 50, loss: 0.1104799
+batch: 60, loss: 0.1009521
+batch: 70, loss: 0.1033968
+epoch: 20
+epoch loss: 0.0960921
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1273228
+batch: 20, loss: 0.0868817
+batch: 30, loss: 0.0849073
+batch: 40, loss: 0.1165299
+batch: 50, loss: 0.0947223
+batch: 60, loss: 0.0865576
+batch: 70, loss: 0.0892394
+epoch: 21
+epoch loss: 0.0954549
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1044813
+batch: 20, loss: 0.0928146
+batch: 30, loss: 0.0905017
+batch: 40, loss: 0.0719215
+batch: 50, loss: 0.0830975
+batch: 60, loss: 0.0949269
+batch: 70, loss: 0.0845848
+epoch: 22
+epoch loss: 0.0944078
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0914877
+batch: 20, loss: 0.1056109
+batch: 30, loss: 0.1037284
+batch: 40, loss: 0.0920623
+batch: 50, loss: 0.1117116
+batch: 60, loss: 0.1100063
+batch: 70, loss: 0.0906991
+epoch: 23
+epoch loss: 0.0963641
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1006322
+batch: 20, loss: 0.1073296
+batch: 30, loss: 0.0980393
+batch: 40, loss: 0.0660637
+batch: 50, loss: 0.1327815
+batch: 60, loss: 0.0969143
+batch: 70, loss: 0.0779463
+epoch: 24
+epoch loss: 0.0968447
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0892761
+batch: 20, loss: 0.0965344
+batch: 30, loss: 0.1184385
+batch: 40, loss: 0.0975935
+batch: 50, loss: 0.0921459
+batch: 60, loss: 0.0818578
+batch: 70, loss: 0.1240431
+epoch: 25
+epoch loss: 0.0961038
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0928905
+batch: 20, loss: 0.0989976
+batch: 30, loss: 0.0942681
+batch: 40, loss: 0.0958972
+batch: 50, loss: 0.0853840
+batch: 60, loss: 0.0933901
+batch: 70, loss: 0.0810064
+epoch: 26
+epoch loss: 0.0945373
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0990677
+batch: 20, loss: 0.0778040
+batch: 30, loss: 0.0974977
+batch: 40, loss: 0.0866498
+batch: 50, loss: 0.1142107
+batch: 60, loss: 0.0939541
+batch: 70, loss: 0.0775953
+epoch: 27
+epoch loss: 0.0972775
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0841560
+batch: 20, loss: 0.1003827
+batch: 30, loss: 0.0859339
+batch: 40, loss: 0.0995913
+batch: 50, loss: 0.0928122
+batch: 60, loss: 0.0908877
+batch: 70, loss: 0.1000134
+epoch: 28
+epoch loss: 0.0933766
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0931188
+batch: 20, loss: 0.0937765
+batch: 30, loss: 0.1017655
+batch: 40, loss: 0.1143160
+batch: 50, loss: 0.0800046
+batch: 60, loss: 0.0752776
+batch: 70, loss: 0.0792622
+epoch: 29
+epoch loss: 0.0932848
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0759159
+batch: 20, loss: 0.0968945
+batch: 30, loss: 0.0786982
+batch: 40, loss: 0.0884108
+batch: 50, loss: 0.1030996
+batch: 60, loss: 0.0811309
+batch: 70, loss: 0.1170821
+epoch: 30
+epoch loss: 0.0935001
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0854724
+batch: 20, loss: 0.0806267
+batch: 30, loss: 0.0914604
+batch: 40, loss: 0.0961014
+batch: 50, loss: 0.0916021
+batch: 60, loss: 0.0811955
+batch: 70, loss: 0.1257122
+epoch: 31
+epoch loss: 0.0936103
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1135465
+batch: 20, loss: 0.0889276
+batch: 30, loss: 0.0930239
+batch: 40, loss: 0.0828569
+batch: 50, loss: 0.0944685
+batch: 60, loss: 0.1013893
+batch: 70, loss: 0.1348640
+epoch: 32
+epoch loss: 0.0954452
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0816880
+batch: 20, loss: 0.0935661
+batch: 30, loss: 0.0824273
+batch: 40, loss: 0.0834722
+batch: 50, loss: 0.1035687
+batch: 60, loss: 0.0760038
+batch: 70, loss: 0.0668639
+epoch: 33
+epoch loss: 0.0919209
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0812320
+batch: 20, loss: 0.0894374
+batch: 30, loss: 0.0857893
+batch: 40, loss: 0.1006230
+batch: 50, loss: 0.0866114
+batch: 60, loss: 0.0921277
+batch: 70, loss: 0.0936282
+epoch: 34
+epoch loss: 0.0918399
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0959996
+batch: 20, loss: 0.0834593
+batch: 30, loss: 0.1010552
+batch: 40, loss: 0.0780982
+batch: 50, loss: 0.0857873
+batch: 60, loss: 0.0808695
+batch: 70, loss: 0.1204959
+epoch: 35
+epoch loss: 0.0926142
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0973589
+batch: 20, loss: 0.0995558
+batch: 30, loss: 0.0989814
+batch: 40, loss: 0.0842508
+batch: 50, loss: 0.0735620
+batch: 60, loss: 0.0999766
+batch: 70, loss: 0.0836276
+epoch: 36
+epoch loss: 0.0918565
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0850317
+batch: 20, loss: 0.1007320
+batch: 30, loss: 0.0846749
+batch: 40, loss: 0.0777010
+batch: 50, loss: 0.0916271
+batch: 60, loss: 0.0920531
+batch: 70, loss: 0.0881299
+epoch: 37
+epoch loss: 0.0922266
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0860533
+batch: 20, loss: 0.1034238
+batch: 30, loss: 0.1011544
+batch: 40, loss: 0.0912892
+batch: 50, loss: 0.1057932
+batch: 60, loss: 0.0887390
+batch: 70, loss: 0.1173459
+epoch: 38
+epoch loss: 0.0941496
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.1010702
+batch: 20, loss: 0.0864056
+batch: 30, loss: 0.0903280
+batch: 40, loss: 0.0949149
+batch: 50, loss: 0.0850618
+batch: 60, loss: 0.0920840
+batch: 70, loss: 0.0867297
+epoch: 39
+epoch loss: 0.0922302
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0902898
+batch: 20, loss: 0.1073889
+batch: 30, loss: 0.0821387
+batch: 40, loss: 0.0846093
+batch: 50, loss: 0.0772653
+batch: 60, loss: 0.0993730
+batch: 70, loss: 0.0574894
+epoch: 40
+epoch loss: 0.0923514
+Learning Rate: 1.00e-04
+batch: 10, loss: 0.0732210
+batch: 20, loss: 0.0997903
+batch: 30, loss: 0.0907439
+batch: 40, loss: 0.1088932
+batch: 50, loss: 0.0989284
+batch: 60, loss: 0.0895707
+batch: 70, loss: 0.1094111
+epoch: 41
+epoch loss: 0.0923076
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.0786584
+batch: 20, loss: 0.0838334
+batch: 30, loss: 0.1124400
+batch: 40, loss: 0.0931371
+batch: 50, loss: 0.1143587
+batch: 60, loss: 0.1016010
+batch: 70, loss: 0.0753909
+epoch: 42
+epoch loss: 0.0916488
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.0884195
+batch: 20, loss: 0.0890844
+batch: 30, loss: 0.0918936
+batch: 40, loss: 0.0756365
+batch: 50, loss: 0.0895487
+batch: 60, loss: 0.0918717
+batch: 70, loss: 0.1107567
+epoch: 43
+epoch loss: 0.0929199
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.0842240
+batch: 20, loss: 0.0712470
+batch: 30, loss: 0.0762581
+batch: 40, loss: 0.0892547
+batch: 50, loss: 0.0909269
+batch: 60, loss: 0.1159320
+batch: 70, loss: 0.0885670
+epoch: 44
+epoch loss: 0.0914548
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.0675858
+batch: 20, loss: 0.0866358
+batch: 30, loss: 0.0951702
+batch: 40, loss: 0.1009567
+batch: 50, loss: 0.0835406
+batch: 60, loss: 0.0977527
+batch: 70, loss: 0.0979844
+epoch: 45
+epoch loss: 0.0917613
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.1168770
+batch: 20, loss: 0.0599438
+batch: 30, loss: 0.0895906
+batch: 40, loss: 0.0829452
+batch: 50, loss: 0.0974565
+batch: 60, loss: 0.0927264
+batch: 70, loss: 0.0994996
+epoch: 46
+epoch loss: 0.0923625
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.0830620
+batch: 20, loss: 0.0983178
+batch: 30, loss: 0.0982262
+batch: 40, loss: 0.1179461
+batch: 50, loss: 0.0975261
+batch: 60, loss: 0.0905843
+batch: 70, loss: 0.1144459
+epoch: 47
+epoch loss: 0.0910607
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.1097251
+batch: 20, loss: 0.1030948
+batch: 30, loss: 0.0787879
+batch: 40, loss: 0.0940578
+batch: 50, loss: 0.1006348
+batch: 60, loss: 0.0969862
+batch: 70, loss: 0.1073988
+epoch: 48
+epoch loss: 0.0912846
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.0775667
+batch: 20, loss: 0.0906463
+batch: 30, loss: 0.0874075
+batch: 40, loss: 0.0900856
+batch: 50, loss: 0.0919488
+batch: 60, loss: 0.0977662
+batch: 70, loss: 0.0991673
+epoch: 49
+epoch loss: 0.0875300
+Learning Rate: 7.00e-05
+batch: 10, loss: 0.0775428
+batch: 20, loss: 0.0976976
+batch: 30, loss: 0.0767797
+batch: 40, loss: 0.0952327
+batch: 50, loss: 0.0693409
+batch: 60, loss: 0.0812166
+batch: 70, loss: 0.0887253
+epoch: 50
+epoch loss: 0.0906948
+Learning Rate: 7.00e-05
