@@ -1,4 +1,4 @@
-# 03 — LLM/CNF Hybrid: Text-Conditioned Galaxy Generation (Optional when time)
+# 03 — LLM/CNF Hybrid: Text-Conditioned Galaxy Generation (Postponed)
 
 Training a Continuous Normalizing Flow conditioned on semantic text embeddings
 to enable controlled galaxy morphology synthesis from natural language descriptions.
@@ -47,11 +47,4 @@ without retraining.
 
 ## Status
 
-**Planned** — optional stage, begins after Stage 02 is complete.
-
-## References
-
-- Chen et al. (2019) — *Neural Ordinary Differential Equations*
-  [`arXiv:1806.07366`](https://arxiv.org/abs/1806.07366)
-- Lipman et al. (2024) — *Flow Matching Guide and Code*
-  [`arXiv:2412.06264`](https://arxiv.org/abs/2412.06264)
+**Postponed** — optional stage, begins after Stage 02 is complete.
